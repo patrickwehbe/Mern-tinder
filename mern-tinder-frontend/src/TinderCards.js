@@ -8,7 +8,9 @@ function Cards() {
 
   useEffect(() => {
     async function fetchData() {
-      const req = await axios.get("http://localhost:8000/tinder/cards");
+      const req = await axios.get(
+        "https://mern-tinder.herokuapp.com/tinder/cards"
+      );
       setPeople(req.data);
     }
     fetchData();
